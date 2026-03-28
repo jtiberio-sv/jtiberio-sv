@@ -153,14 +153,8 @@ const jp = {
 ![GitHub since](https://img.shields.io/badge/On_GitHub_since-2014-181717?style=flat-square&logo=github)
 ![Profile Views](https://komarev.com/ghpvc/?username=jtiberio-sv&color=58A6FF&style=flat-square&label=Profile+Views)
 
-</div>
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/jtiberio-sv/jtiberio-sv/output/github-snake-dark.svg" alt="Snake animation" />
-</div>
-
 ---
 
-<div align="center">
-  <i>"The best code is the one that improves itself."</i>
+<i>"The best code is the one that improves itself."</i>
+
 </div>
