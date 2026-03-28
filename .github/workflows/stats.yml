@@ -18,7 +18,7 @@ jobs:
 
       - name: Fetch stats via GitHub GraphQL API
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           # Buscar stats reais incluindo repos privados e orgs
           STATS=$(gh api graphql -f query='
