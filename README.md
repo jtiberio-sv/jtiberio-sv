@@ -94,16 +94,28 @@ const jp = {
 ### `> stats --verbose`
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=jtiberio-sv&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&ring_color=58A6FF&title_color=58A6FF&icon_color=58A6FF" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jtiberio-sv&layout=compact&theme=github_dark&hide_border=true&title_color=58A6FF&langs_count=8" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-sigma-five.vercel.app/api?username=jtiberio-sv&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&ring_color=58A6FF&title_color=58A6FF&icon_color=58A6FF" />
+    <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=jtiberio-sv&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&ring_color=58A6FF&title_color=58A6FF&icon_color=58A6FF" alt="GitHub Stats" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=jtiberio-sv&layout=compact&theme=github_dark&hide_border=true&title_color=58A6FF&langs_count=8" />
+    <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=jtiberio-sv&layout=compact&theme=github_dark&hide_border=true&title_color=58A6FF&langs_count=8" alt="Top Languages" />
+  </picture>
 </div>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=jtiberio-sv&theme=github-dark-blue&hide_border=true&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=jtiberio-sv&theme=github-dark-blue&hide_border=true&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF" />
+    <img src="https://streak-stats.demolab.com?user=jtiberio-sv&theme=github-dark-blue&hide_border=true&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF" alt="GitHub Streak" />
+  </picture>
 </div>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=jtiberio-sv&theme=github-dark&hide_border=true&color=58A6FF&line=58A6FF&point=ffffff&area=true&area_color=58A6FF" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=jtiberio-sv&theme=github-dark&hide_border=true&color=58A6FF&line=58A6FF&point=ffffff&area=true&area_color=58A6FF" />
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=jtiberio-sv&theme=github-dark&hide_border=true&color=58A6FF&line=58A6FF&point=ffffff&area=true&area_color=58A6FF" alt="Activity Graph" />
+  </picture>
 </div>
 
 ---
