@@ -103,12 +103,6 @@ const jp = {
   <img src="https://raw.githubusercontent.com/jtiberio-sv/jtiberio-sv/output/langs.svg" alt="Top Languages" />
 </a>
 
-<br><br>
-
-<!-- Activity Graph -->
-<a href="https://github.com/jtiberio-sv">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=jtiberio-sv&theme=github-dark&hide_border=true&color=58A6FF&line=58A6FF&point=ffffff&area=true&area_color=58A6FF" alt="Activity Graph" />
-</a>
 
 </div>
 
