@@ -95,32 +95,16 @@ const jp = {
 
 <div align="center">
 
-<!-- GitHub Stats -->
+<!-- Stats gerados pelo workflow — dados reais incluindo repos privados e orgs -->
 <a href="https://github.com/jtiberio-sv">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=jtiberio-sv&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&ring_color=58A6FF&title_color=58A6FF&icon_color=58A6FF&bg_color=0d1117" alt="GitHub Stats" />
-</a>
-<a href="https://github.com/jtiberio-sv">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jtiberio-sv&layout=compact&hide_border=true&title_color=58A6FF&bg_color=0d1117&text_color=c9d1d9&langs_count=8" alt="Top Languages" />
+  <img src="https://raw.githubusercontent.com/jtiberio-sv/jtiberio-sv/output/stats.svg" alt="GitHub Stats" />
 </a>
 
-</div>
+<br><br>
 
-<br>
-
-<div align="center">
-
-<!-- Activity Graph — mostra o padrao de contribuicoes -->
+<!-- Activity Graph -->
 <a href="https://github.com/jtiberio-sv">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=jtiberio-sv&theme=github-dark&hide_border=true&color=58A6FF&line=58A6FF&point=ffffff&area=true&area_color=58A6FF" alt="Activity Graph" />
-</a>
-
-</div>
-
-<div align="center">
-
-<!-- Trophies -->
-<a href="https://github.com/jtiberio-sv">
-  <img src="https://github-profile-trophy.vercel.app/?username=jtiberio-sv&theme=algolia&no-frame=true&no-bg=true&column=7&margin-w=10" alt="Trophies" />
 </a>
 
 </div>
@@ -170,7 +154,6 @@ const jp = {
 <div align="center">
 
 ![GitHub since](https://img.shields.io/badge/On_GitHub_since-2014-181717?style=flat-square&logo=github)
-![Contributions](https://img.shields.io/badge/2026_Contributions-1800+-58A6FF?style=flat-square)
 ![Profile Views](https://komarev.com/ghpvc/?username=jtiberio-sv&color=58A6FF&style=flat-square&label=Profile+Views)
 
 </div>
