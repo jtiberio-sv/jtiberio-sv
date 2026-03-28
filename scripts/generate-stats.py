@@ -12,18 +12,16 @@ cc = user["contributionsCollection"]
 repos = user["repositories"]
 
 year = datetime.now().year
-contribs = cc["contributionCalendar"]["totalContributions"]
-private = cc["restrictedContributionsCount"]
-total = contribs + private
+total = cc["contributionCalendar"]["totalContributions"]
 commits = cc["totalCommitContributions"]
-prs_year = cc["totalPullRequestContributions"]
-issues_year = cc["totalIssueContributions"]
+prs = cc["totalPullRequestContributions"]
+issues = cc["totalIssueContributions"]
 reviews = cc["totalPullRequestReviewContributions"]
 repo_count = repos["totalCount"]
+private_repos = user["privateRepos"]["totalCount"]
+public_repos = user["publicRepos"]["totalCount"]
 stars = sum(n["stargazerCount"] for n in repos["nodes"])
 followers = user["followers"]["totalCount"]
-total_prs = user["pullRequests"]["totalCount"]
-total_issues = user["issues"]["totalCount"]
 
 # --- Stats SVG ---
 stats_svg = f'''<svg width="495" height="195" xmlns="http://www.w3.org/2000/svg">
@@ -33,23 +31,22 @@ stats_svg = f'''<svg width="495" height="195" xmlns="http://www.w3.org/2000/svg"
 
   <text x="25" y="78" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">&#9733; Total Contributions ({year})</text>
   <text x="280" y="78" fill="#58A6FF" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="700" font-size="16">{total}</text>
-  <text x="330" y="78" fill="#8b949e" font-family="Segoe UI, Ubuntu, sans-serif" font-size="11">(+{private} private)</text>
 
   <text x="25" y="103" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13">Commits</text>
   <text x="280" y="103" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13">{commits}</text>
+  <text x="370" y="103" fill="#8b949e" font-family="Segoe UI, Ubuntu, sans-serif" font-size="11">Repos: {repo_count}</text>
 
   <text x="25" y="125" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13">Pull Requests</text>
-  <text x="280" y="125" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13">{total_prs}</text>
+  <text x="280" y="125" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13">{prs}</text>
+  <text x="370" y="125" fill="#8b949e" font-family="Segoe UI, Ubuntu, sans-serif" font-size="11">&#128274; Private: {private_repos}</text>
 
   <text x="25" y="147" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13">Issues</text>
-  <text x="280" y="147" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13">{total_issues}</text>
+  <text x="280" y="147" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13">{issues}</text>
+  <text x="370" y="147" fill="#8b949e" font-family="Segoe UI, Ubuntu, sans-serif" font-size="11">Stars: {stars}</text>
 
   <text x="25" y="169" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13">Code Reviews</text>
   <text x="280" y="169" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13">{reviews}</text>
-
-  <text x="350" y="103" fill="#8b949e" font-family="Segoe UI, Ubuntu, sans-serif" font-size="11">Repos: {repo_count}</text>
-  <text x="350" y="125" fill="#8b949e" font-family="Segoe UI, Ubuntu, sans-serif" font-size="11">Stars: {stars}</text>
-  <text x="350" y="147" fill="#8b949e" font-family="Segoe UI, Ubuntu, sans-serif" font-size="11">Followers: {followers}</text>
+  <text x="370" y="169" fill="#8b949e" font-family="Segoe UI, Ubuntu, sans-serif" font-size="11">Followers: {followers}</text>
 </svg>'''
 
 with open("dist/stats.svg", "w") as f:
@@ -86,4 +83,4 @@ langs_svg = f'''<svg width="350" height="{height}" xmlns="http://www.w3.org/2000
 with open("dist/langs.svg", "w") as f:
     f.write(langs_svg)
 
-print(f"Generated: Total={total}, Commits={commits}, PRs={total_prs}, Langs={len(top_langs)}")
+print(f"Generated: Total={total}, Commits={commits}, PRs={prs}, Issues={issues}, Reviews={reviews}, Repos={repo_count} ({private_repos} private), Langs={len(top_langs)}")

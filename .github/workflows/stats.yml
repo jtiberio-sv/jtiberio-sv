@@ -22,7 +22,7 @@ jobs:
         run: |
           mkdir -p dist
 
-          STATS=$(gh api graphql -f query='query { user(login: "jtiberio-sv") { contributionsCollection { contributionCalendar { totalContributions } totalCommitContributions totalPullRequestContributions totalIssueContributions totalPullRequestReviewContributions restrictedContributionsCount } repositories(ownerAffiliations: [OWNER, COLLABORATOR], first: 100) { totalCount nodes { stargazerCount languages(first: 10, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name color } } } } } followers { totalCount } pullRequests { totalCount } issues { totalCount } } }')
+          STATS=$(gh api graphql -f query='query { user(login: "jtiberio-sv") { contributionsCollection { contributionCalendar { totalContributions } totalCommitContributions totalPullRequestContributions totalIssueContributions totalPullRequestReviewContributions restrictedContributionsCount } repositories(ownerAffiliations: [OWNER, COLLABORATOR, ORGANIZATION_MEMBER], first: 100) { totalCount nodes { stargazerCount languages(first: 10, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name color } } } } } privateRepos: repositories(privacy: PRIVATE, ownerAffiliations: [OWNER, COLLABORATOR, ORGANIZATION_MEMBER], first: 1) { totalCount } publicRepos: repositories(privacy: PUBLIC, ownerAffiliations: [OWNER, COLLABORATOR, ORGANIZATION_MEMBER], first: 1) { totalCount } followers { totalCount } } }')
 
           python3 scripts/generate-stats.py "$STATS"
 
