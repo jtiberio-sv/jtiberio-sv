@@ -94,28 +94,35 @@ const jp = {
 ### `> stats --verbose`
 
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-sigma-five.vercel.app/api?username=jtiberio-sv&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&ring_color=58A6FF&title_color=58A6FF&icon_color=58A6FF" />
-    <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=jtiberio-sv&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&ring_color=58A6FF&title_color=58A6FF&icon_color=58A6FF" alt="GitHub Stats" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=jtiberio-sv&layout=compact&theme=github_dark&hide_border=true&title_color=58A6FF&langs_count=8" />
-    <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=jtiberio-sv&layout=compact&theme=github_dark&hide_border=true&title_color=58A6FF&langs_count=8" alt="Top Languages" />
-  </picture>
+
+<!-- GitHub Stats — conta privadas com include_all_commits -->
+<a href="https://github.com/jtiberio-sv">
+  <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=jtiberio-sv&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&ring_color=58A6FF&title_color=58A6FF&icon_color=58A6FF" alt="GitHub Stats" />
+</a>
+<a href="https://github.com/jtiberio-sv">
+  <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=jtiberio-sv&layout=compact&theme=github_dark&hide_border=true&title_color=58A6FF&langs_count=8" alt="Top Languages" />
+</a>
+
+</div>
+
+<br>
+
+<div align="center">
+
+<!-- Activity Graph — mostra o padrao de contribuicoes -->
+<a href="https://github.com/jtiberio-sv">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=jtiberio-sv&theme=github-dark&hide_border=true&color=58A6FF&line=58A6FF&point=ffffff&area=true&area_color=58A6FF" alt="Activity Graph" />
+</a>
+
 </div>
 
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=jtiberio-sv&theme=github-dark-blue&hide_border=true&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF" />
-    <img src="https://streak-stats.demolab.com?user=jtiberio-sv&theme=github-dark-blue&hide_border=true&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF" alt="GitHub Streak" />
-  </picture>
-</div>
 
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=jtiberio-sv&theme=github-dark&hide_border=true&color=58A6FF&line=58A6FF&point=ffffff&area=true&area_color=58A6FF" />
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=jtiberio-sv&theme=github-dark&hide_border=true&color=58A6FF&line=58A6FF&point=ffffff&area=true&area_color=58A6FF" alt="Activity Graph" />
-  </picture>
+<!-- Trophies -->
+<a href="https://github.com/jtiberio-sv">
+  <img src="https://github-profile-trophy.vercel.app/?username=jtiberio-sv&theme=darkhub&no-frame=true&no-bg=true&column=7&margin-w=10" alt="Trophies" />
+</a>
+
 </div>
 
 ---
