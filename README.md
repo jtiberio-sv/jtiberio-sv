@@ -100,7 +100,7 @@ const jp = {
   <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=jtiberio-sv&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&ring_color=58A6FF&title_color=58A6FF&icon_color=58A6FF" alt="GitHub Stats" />
 </a>
 <a href="https://github.com/jtiberio-sv">
-  <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=jtiberio-sv&layout=compact&theme=github_dark&hide_border=true&title_color=58A6FF&langs_count=8" alt="Top Languages" />
+  <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=jtiberio-sv&layout=compact&theme=github_dark&hide_border=true&title_color=58A6FF&bg_color=0d1117&text_color=c9d1d9&langs_count=8" alt="Top Languages" />
 </a>
 
 </div>
