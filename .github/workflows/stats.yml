@@ -20,7 +20,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
-          # Buscar stats reais incluindo repos privados e orgs
+          # Query apenas dados do user (sem repos de org que bloqueiam)
           STATS=$(gh api graphql -f query='
             query {
               user(login: "jtiberio-sv") {
@@ -34,7 +34,7 @@ jobs:
                   totalPullRequestReviewContributions
                   restrictedContributionsCount
                 }
-                repositories(ownerAffiliations: [OWNER, COLLABORATOR, ORGANIZATION_MEMBER], first: 100) {
+                repositories(ownerAffiliations: [OWNER, COLLABORATOR], first: 100) {
                   totalCount
                   nodes {
                     stargazerCount
@@ -69,53 +69,66 @@ jobs:
           TOTAL=$((CONTRIBS + PRIVATE))
           YEAR=$(date +%Y)
 
-          # Extrair top linguagens
-          LANGS=$(echo "$STATS" | jq -r '
+          # Top linguagens com barras de progresso
+          LANG_BARS=""
+          Y_POS=75
+          TOTAL_SIZE=$(echo "$STATS" | jq '[.data.user.repositories.nodes[].languages.edges[].size] | add // 1')
+
+          while IFS='|' read -r NAME COLOR PCT; do
+            [ -z "$NAME" ] && continue
+            BAR_WIDTH=$(echo "$PCT * 3.2" | bc | cut -d. -f1)
+            [ -z "$BAR_WIDTH" ] && BAR_WIDTH=0
+            LANG_BARS="${LANG_BARS}<rect x=\"25\" y=\"$((Y_POS - 10))\" width=\"${BAR_WIDTH}\" height=\"12\" rx=\"3\" fill=\"${COLOR}\"/>
+            <text x=\"$((BAR_WIDTH + 35))\" y=\"${Y_POS}\" fill=\"#c9d1d9\" font-family=\"Segoe UI, Ubuntu, sans-serif\" font-size=\"12\">${NAME} (${PCT}%)</text>"
+            Y_POS=$((Y_POS + 22))
+          done <<< "$(echo "$STATS" | jq -r '
             [.data.user.repositories.nodes[].languages.edges[] | {name: .node.name, color: .node.color, size: .size}]
             | group_by(.name)
             | map({name: .[0].name, color: .[0].color, size: (map(.size) | add)})
             | sort_by(-.size)
-            | .[0:8]
+            | .[0:7]
             | . as $all
             | ($all | map(.size) | add) as $total
-            | map({name, color, pct: ((.size / $total * 100 * 10 | round) / 10)})
+            | map("\(.name)|\(.color)|\((.size / $total * 100 * 10 | round) / 10)")
             | .[]
-            | "\(.name)|\(.color)|\(.pct)"
-          ')
+          ')"
 
-          # Gerar SVG
+          LANG_HEIGHT=$((Y_POS + 5))
+
           mkdir -p dist
 
-          # --- Stats Card ---
+          # Stats Card
           cat > dist/stats.svg << SVGEOF
-          <svg width="495" height="195" xmlns="http://www.w3.org/2000/svg">
-            <rect width="495" height="195" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
-            <text x="25" y="35" fill="#58A6FF" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="600" font-size="18">GitHub Stats — $YEAR</text>
-            <line x1="25" y1="48" x2="470" y2="48" stroke="#21262d" stroke-width="1"/>
+<svg width="495" height="195" xmlns="http://www.w3.org/2000/svg">
+  <rect width="495" height="195" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="25" y="35" fill="#58A6FF" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="600" font-size="18">GitHub Stats — ${YEAR}</text>
+  <line x1="25" y1="48" x2="470" y2="48" stroke="#21262d" stroke-width="1"/>
+  <text x="25" y="75" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">Total Contributions (${YEAR})</text>
+  <text x="300" y="75" fill="#58A6FF" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="700" font-size="14">${TOTAL}</text>
+  <text x="350" y="75" fill="#8b949e" font-family="Segoe UI, Ubuntu, sans-serif" font-size="11">(+${PRIVATE} private)</text>
+  <text x="25" y="100" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">Commits</text>
+  <text x="300" y="100" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">${COMMITS}</text>
+  <text x="25" y="125" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">Pull Requests</text>
+  <text x="300" y="125" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">${TOTAL_PRS}</text>
+  <text x="25" y="150" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">Issues</text>
+  <text x="300" y="150" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">${TOTAL_ISSUES}</text>
+  <text x="25" y="175" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">Code Reviews</text>
+  <text x="300" y="175" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">${REVIEWS}</text>
+  <text x="350" y="150" fill="#8b949e" font-family="Segoe UI, Ubuntu, sans-serif" font-size="11">Repos: ${REPOS} | Stars: ${STARS} | Followers: ${FOLLOWERS}</text>
+</svg>
+SVGEOF
 
-            <text x="25" y="75" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">Total Contributions (${YEAR})</text>
-            <text x="300" y="75" fill="#58A6FF" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="700" font-size="14">${TOTAL}</text>
+          # Languages Card
+          cat > dist/langs.svg << LANGEOF
+<svg width="350" height="${LANG_HEIGHT}" xmlns="http://www.w3.org/2000/svg">
+  <rect width="350" height="${LANG_HEIGHT}" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="25" y="35" fill="#58A6FF" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="600" font-size="16">Top Languages</text>
+  <line x1="25" y1="48" x2="325" y2="48" stroke="#21262d" stroke-width="1"/>
+  ${LANG_BARS}
+</svg>
+LANGEOF
 
-            <text x="25" y="100" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">Commits</text>
-            <text x="300" y="100" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">${COMMITS}</text>
-
-            <text x="25" y="125" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">Pull Requests</text>
-            <text x="300" y="125" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">${TOTAL_PRS}</text>
-
-            <text x="25" y="150" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">Issues</text>
-            <text x="300" y="150" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">${TOTAL_ISSUES}</text>
-
-            <text x="25" y="175" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">Code Reviews</text>
-            <text x="300" y="175" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14">${REVIEWS}</text>
-
-            <text x="350" y="75" fill="#8b949e" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">(+${PRIVATE} private)</text>
-
-            <text x="350" y="125" fill="#8b949e" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">Repos: ${REPOS} | Stars: ${STARS}</text>
-            <text x="350" y="150" fill="#8b949e" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">Followers: ${FOLLOWERS}</text>
-          </svg>
-          SVGEOF
-
-          echo "Stats SVG generated: Total=$TOTAL, Commits=$COMMITS, PRs=$TOTAL_PRS"
+          echo "Stats SVG generated: Total=$TOTAL, Commits=$COMMITS, PRs=$TOTAL_PRS, Repos=$REPOS"
 
       - name: Deploy to output branch
         uses: crazy-max/ghaction-github-pages@v4

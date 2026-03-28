@@ -95,9 +95,12 @@ const jp = {
 
 <div align="center">
 
-<!-- Stats gerados pelo workflow — dados reais incluindo repos privados e orgs -->
+<!-- Stats gerados pelo workflow — dados reais incluindo repos privados -->
 <a href="https://github.com/jtiberio-sv">
   <img src="https://raw.githubusercontent.com/jtiberio-sv/jtiberio-sv/output/stats.svg" alt="GitHub Stats" />
+</a>
+<a href="https://github.com/jtiberio-sv">
+  <img src="https://raw.githubusercontent.com/jtiberio-sv/jtiberio-sv/output/langs.svg" alt="Top Languages" />
 </a>
 
 <br><br>
