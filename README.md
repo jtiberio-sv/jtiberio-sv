@@ -95,12 +95,12 @@ const jp = {
 
 <div align="center">
 
-<!-- GitHub Stats — conta privadas com include_all_commits -->
+<!-- GitHub Stats -->
 <a href="https://github.com/jtiberio-sv">
-  <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=jtiberio-sv&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&ring_color=58A6FF&title_color=58A6FF&icon_color=58A6FF" alt="GitHub Stats" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=jtiberio-sv&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&ring_color=58A6FF&title_color=58A6FF&icon_color=58A6FF&bg_color=0d1117" alt="GitHub Stats" />
 </a>
 <a href="https://github.com/jtiberio-sv">
-  <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=jtiberio-sv&layout=compact&theme=github_dark&hide_border=true&title_color=58A6FF&bg_color=0d1117&text_color=c9d1d9&langs_count=8" alt="Top Languages" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jtiberio-sv&layout=compact&hide_border=true&title_color=58A6FF&bg_color=0d1117&text_color=c9d1d9&langs_count=8" alt="Top Languages" />
 </a>
 
 </div>
@@ -120,7 +120,7 @@ const jp = {
 
 <!-- Trophies -->
 <a href="https://github.com/jtiberio-sv">
-  <img src="https://github-profile-trophy.vercel.app/?username=jtiberio-sv&theme=darkhub&no-frame=true&no-bg=true&column=7&margin-w=10" alt="Trophies" />
+  <img src="https://github-profile-trophy.vercel.app/?username=jtiberio-sv&theme=algolia&no-frame=true&no-bg=true&column=7&margin-w=10" alt="Trophies" />
 </a>
 
 </div>
