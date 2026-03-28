@@ -112,12 +112,12 @@ const jp = {
 
 <div align="center">
 
-#### **Self-Evolving Telegram Bot**
+#### **Self-Evolving DevOps Assistant**
 
-*A bot that improves its own codebase autonomously*
+*An AI-powered system that analyzes, improves and deploys its own codebase*
 
 ```
- Cron (daily)               Telegram
+ Cron (daily)               Mobile notification
      |                         |
      v                         v
  AI analyzes codebase    Human approves/rejects
@@ -138,7 +138,7 @@ const jp = {
                     Creates PR --> CI --> Deploy
 ```
 
-**Stack:** TypeScript + grammY + PostgreSQL + BullMQ + Claude AI + GitHub Actions
+**Stack:** TypeScript + Node.js + PostgreSQL + BullMQ + Claude AI + GitHub Actions
 
 **Numbers:** 400+ tests | 50+ modules | Self-hosted CI/CD | Zero-downtime deploys
 
@@ -146,12 +146,16 @@ const jp = {
 
 ---
 
-### `> uptime`
+### `> ps aux | grep ai`
 
 <div align="center">
 
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=2000&pause=500&color=39D353&center=true&vCenter=true&repeat=true&width=600&height=80&lines=%24+git+log+--oneline+-1;%24+Running+daily+codebase+analysis...;%24+3+improvement+proposals+generated;%24+Creating+PR+%23247...+CI+passed.+Ready+for+review.;%24+Deploy+v2.4.1+%E2%9C%93+Zero+downtime" alt="AI Pipeline" />
+
 ![GitHub since](https://img.shields.io/badge/On_GitHub_since-2014-181717?style=flat-square&logo=github)
 ![Profile Views](https://komarev.com/ghpvc/?username=jtiberio-sv&color=58A6FF&style=flat-square&label=Profile+Views)
+![Bot Status](https://img.shields.io/badge/AI_Pipeline-active-39D353?style=flat-square&logo=dependabot&logoColor=white)
+![Auto PRs](https://img.shields.io/badge/Auto_PRs-enabled-58A6FF?style=flat-square&logo=githubactions&logoColor=white)
 
 ---
 
