@@ -3,7 +3,7 @@
   <text x="25" y="35" fill="#58A6FF" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="600" font-size="16">Top Languages</text>
   <line x1="25" y1="48" x2="325" y2="48" stroke="#21262d" stroke-width="1"/>
   <rect x="25" y="58" width="119" height="14" rx="3" fill="#4F5D95"/>
-  <text x="154" y="69" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">PHP (47.9%)</text>
+  <text x="154" y="69" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">PHP (47.8%)</text>
   <rect x="25" y="82" width="75" height="14" rx="3" fill="#f1e05a"/>
   <text x="110" y="93" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">JavaScript (30.2%)</text>
   <rect x="25" y="106" width="27" height="14" rx="3" fill="#e34c26"/>
@@ -16,6 +16,6 @@
   <text x="37" y="189" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">Blade (0.7%)</text>
   <rect x="25" y="202" width="2" height="14" rx="3" fill="#701516"/>
   <text x="37" y="213" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">Ruby (0.6%)</text>
-  <rect x="25" y="226" width="2" height="14" rx="3" fill="#41b883"/>
-  <text x="37" y="237" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">Vue (0.4%)</text>
+  <rect x="25" y="226" width="2" height="14" rx="3" fill="#3178c6"/>
+  <text x="37" y="237" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">TypeScript (0.5%)</text>
 </svg>
