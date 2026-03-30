@@ -1,6 +1,6 @@
 <div align="center">
 
-# Joao Pedro Tiberio
+# João Pedro Tibério
 
 **`Tech Lead | DevOps | AI Engineering | Quality Obsessed`**
 
