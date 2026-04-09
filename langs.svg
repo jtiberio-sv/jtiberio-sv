@@ -3,7 +3,7 @@
   <text x="25" y="35" fill="#58A6FF" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="600" font-size="16">Top Languages</text>
   <line x1="25" y1="48" x2="325" y2="48" stroke="#21262d" stroke-width="1"/>
   <rect x="25" y="58" width="118" height="14" rx="3" fill="#4F5D95"/>
-  <text x="153" y="69" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">PHP (47.3%)</text>
+  <text x="153" y="69" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">PHP (47.2%)</text>
   <rect x="25" y="82" width="74" height="14" rx="3" fill="#f1e05a"/>
   <text x="109" y="93" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">JavaScript (29.8%)</text>
   <rect x="25" y="106" width="27" height="14" rx="3" fill="#e34c26"/>
