@@ -3,15 +3,15 @@
   <text x="25" y="35" fill="#58A6FF" font-family="Segoe UI, Ubuntu, sans-serif" font-weight="600" font-size="16">Top Languages</text>
   <line x1="25" y1="48" x2="325" y2="48" stroke="#21262d" stroke-width="1"/>
   <rect x="25" y="58" width="128" height="14" rx="3" fill="#4F5D95"/>
-  <text x="163" y="69" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">PHP (51.5%)</text>
-  <rect x="25" y="82" width="80" height="14" rx="3" fill="#f1e05a"/>
-  <text x="115" y="93" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">JavaScript (32.1%)</text>
+  <text x="163" y="69" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">PHP (51.2%)</text>
+  <rect x="25" y="82" width="79" height="14" rx="3" fill="#f1e05a"/>
+  <text x="114" y="93" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">JavaScript (31.9%)</text>
   <rect x="25" y="106" width="17" height="14" rx="3" fill="#e34c26"/>
   <text x="52" y="117" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">HTML (7.0%)</text>
-  <rect x="25" y="130" width="17" height="14" rx="3" fill="#663399"/>
-  <text x="52" y="141" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">CSS (6.8%)</text>
-  <rect x="25" y="154" width="2" height="14" rx="3" fill="#3178c6"/>
-  <text x="37" y="165" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">TypeScript (0.9%)</text>
+  <rect x="25" y="130" width="16" height="14" rx="3" fill="#663399"/>
+  <text x="51" y="141" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">CSS (6.7%)</text>
+  <rect x="25" y="154" width="3" height="14" rx="3" fill="#3178c6"/>
+  <text x="38" y="165" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">TypeScript (1.5%)</text>
   <rect x="25" y="178" width="2" height="14" rx="3" fill="#c6538c"/>
   <text x="37" y="189" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">SCSS (0.9%)</text>
   <rect x="25" y="202" width="2" height="14" rx="3" fill="#f7523f"/>
