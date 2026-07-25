@@ -12,8 +12,8 @@
   <text x="55" y="141" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">CSS (8.0%)</text>
   <rect x="25" y="154" width="8" height="14" rx="3" fill="#3178c6"/>
   <text x="43" y="165" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">TypeScript (3.3%)</text>
-  <rect x="25" y="178" width="3" height="14" rx="3" fill="#3572A5"/>
-  <text x="38" y="189" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">Python (1.5%)</text>
+  <rect x="25" y="178" width="4" height="14" rx="3" fill="#3572A5"/>
+  <text x="39" y="189" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">Python (1.6%)</text>
   <rect x="25" y="202" width="2" height="14" rx="3" fill="#c6538c"/>
   <text x="37" y="213" fill="#c9d1d9" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12">SCSS (1.1%)</text>
   <rect x="25" y="226" width="2" height="14" rx="3" fill="#f7523f"/>
