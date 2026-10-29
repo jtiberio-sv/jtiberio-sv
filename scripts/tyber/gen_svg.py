@@ -22,7 +22,7 @@ for y, r in enumerate(lg):
         if all(c == BLANK for c in nb): lg[y][x] = BLANK
 logo = [''.join(r) for r in lg]
 
-LS = 2.0                              # escala do logo
+LS = 1.5                              # escala do logo
 robot_w, robot_h = cols * CW, rows * LH
 logo_cols, logo_rows = len(logo[0]), len(logo)
 logo_w, logo_h = logo_cols * CW * LS, logo_rows * LH * LS
