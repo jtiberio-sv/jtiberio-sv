@@ -28,6 +28,11 @@ jobs:
 
           echo "SVGs generated in dist/"
 
+      - name: Generate stack SVG
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: python3 scripts/generate-stack.py
+
       - name: Deploy to output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
